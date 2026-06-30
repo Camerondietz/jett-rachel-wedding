@@ -196,18 +196,15 @@ body {
     transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
-.link-tile:hover {
-    transform: translateY(-6px) scale(1.02);
-    filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.25))
-            drop-shadow(0 0 12px rgba(255, 255, 255, 0.45));
-    z-index: 2;
-}
+@media (hover: hover) {
+    .link-tile:hover {
+        transform: translateY(-6px) scale(1.02);
+        filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.25))
+                drop-shadow(0 0 12px rgba(255, 255, 255, 0.45));
+        z-index: 2;
+    }
 
-.link-tile:hover img {
-    transform: scale(1.03) rotate(-0.3deg);
-}
-
-.link-tile:active {
-    transform: translateY(-2px) scale(1.01);
-    transition-duration: 0.1s;
+    .link-tile:hover img {
+        transform: scale(1.03) rotate(-0.3deg);
+    }
 }
