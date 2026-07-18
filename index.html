@@ -21,6 +21,7 @@
             <a href="#travel">Travel</a>
             <a href="#things-to-do">Things to Do</a>
             <a href="#registry">Registry</a>
+            <a href="#rsvp">RSVP</a>
             <a href="wedding-party.html" class="nav-cta">The Wedding Party</a>
         </div>
     </nav>
@@ -42,6 +43,7 @@
                 <a href="https://www.google.com/maps/search/?api=1&query=New+Orleans+Board+of+Trade" target="_blank" rel="noopener" class="link-tile">
                     <img src="media/weekend-dinner.png">
                 </a>
+                <a class="spacer"></a>
             </div>
         </div>
     </section>
@@ -59,6 +61,7 @@
                 <a>
                     <img src="media/travel-other.png">
                 </a>
+                <a class="spacer"></a>
             </div>
         </div>
     </section>
@@ -85,6 +88,7 @@
                 <a class="link-tile">
                     <img src="media/things-swamp.png">
                 </a>
+                <a class="spacer"></a>
             </div>
         </div>
     </section>
@@ -92,7 +96,44 @@
     <section id="registry" class="section section-green">
         <div class="image-slot"><img src="media/registry.png"></div>
     </section>
+    
+    <section id="rsvp" class="section section-green">
+        <div class="rsvp-card">
+            <div class="section-title">
+                <span class="title-line"></span>
+                <h2>RSVP</h2>
+                <span class="title-line"></span>
+            </div>
 
+            <div class="rsvp-step" id="rsvp-step-search">
+                <p class="rsvp-lead">Find your invitation to get started.</p>
+                <form id="rsvp-search-form" class="rsvp-search-form" autocomplete="off">
+                    <input type="text" id="rsvp-name-input" name="name" placeholder="Enter your full name" minlength="2" required>
+                    <button type="submit">Search</button>
+                </form>
+                <p id="rsvp-searching" class="rsvp-note" hidden>Searching...</p>
+                <ul id="rsvp-results" class="rsvp-results" hidden></ul>
+                <p id="rsvp-empty" class="rsvp-note" hidden>We couldn't find that name. Try just your first or last name, or reach out to Rachel &amp; Jett directly.</p>
+                <p id="rsvp-error" class="rsvp-note" hidden>Something went wrong. Please try again in a moment.</p>
+            </div>
+
+            <div class="rsvp-step" id="rsvp-step-form" hidden>
+                <button type="button" id="rsvp-back" class="rsvp-back">&larr; Not you? Search again</button>
+                <form id="rsvp-detail-form">
+                    <div id="rsvp-guest-list" class="rsvp-guest-list"></div>
+                    <label class="rsvp-message-label" for="rsvp-message">Message for the couple (optional)</label>
+                    <textarea id="rsvp-message" name="message" rows="3" maxlength="500" placeholder="Well wishes, song requests, dietary notes..."></textarea>
+                    <p id="rsvp-submit-error" class="rsvp-note" hidden>Something went wrong submitting your RSVP. Please try again.</p>
+                    <button type="submit" class="rsvp-submit">Submit RSVP</button>
+                </form>
+            </div>
+
+            <div class="rsvp-step" id="rsvp-step-success" hidden>
+                <p class="rsvp-success">Thank you! Your RSVP has been received.</p>
+            </div>
+        </div>
+    </section>
     <script src="script.js"></script>
+    <script src="rsvp.js"></script>
 </body>
 </html>
